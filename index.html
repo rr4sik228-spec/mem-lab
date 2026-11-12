@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>MEMO LAB: Brainrot Evolution</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <header class="top">
+    <div class="stat coins"><span class="ico">🪙</span><b id="coins">0</b></div>
+    <div class="stat rate"><span id="rateLabel">в секунду</span><b id="rate">+0</b><em id="boostTag" hidden>x2</em></div>
+    <button id="btnSound" class="round" aria-label="sound">🔊</button>
+  </header>
+
+  <section class="lab">
+    <div id="board" class="board" aria-label="board"></div>
+    <div id="hint" class="hint"></div>
+  </section>
+
+  <section class="actions">
+    <button id="btnBuy" class="big buy"><span id="buyText">Новое существо</span><small id="buyCost">10</small></button>
+    <button id="btnCollect" class="big collect"><span id="collectText">Собрать</span><small id="collectVal">+1</small></button>
+  </section>
+
+  <nav class="tabs">
+    <button data-open="upgrades">🔧 <span data-t="upgrades">Улучшения</span></button>
+    <button data-open="collection">📖 <span data-t="collection">Коллекция</span></button>
+    <button data-open="story">🧪 <span data-t="story">Сюжет</span></button>
+  </nav>
+
+  <div id="toast" class="toast" hidden></div>
+  <div id="floaters"></div>
+</div>
+
+<div id="modal" class="modal" hidden>
+  <div class="sheet">
+    <button id="modalClose" class="x" aria-label="close">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- Яндекс Игры SDK: подключается автоматически на платформе. Локально файл просто не найдётся — игра работает и так. -->
+<script src="/sdk.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
